@@ -4,89 +4,90 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Design Philosophy: Light Mode */
+    --background: 216 17% 98%; /* #F9FAFB - Off-white */
+    --foreground: 215 14% 47%; /* #6B7280 - Cool Gray Text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* #FFFFFF - White */
+    --card-foreground: 215 14% 47%; /* #6B7280 */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 215 14% 47%; /* #6B7280 */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 90% 60%; /* #3B82F6 - Professional Blue */
+    --primary-foreground: 210 40% 98%; /* Light text for on-primary */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217 80% 94%; /* Lighter shade of primary blue */
+    --secondary-foreground: 217 90% 40%; /* Darker blue text */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 216 17% 95%; /* Slightly darker than main bg, e.g. #F3F4F6 */
+    --muted-foreground: 215 15% 55%; /* Softer gray text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 80% 94%; /* Similar to secondary */
+    --accent-foreground: 217 90% 40%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Unchanged - Needs specific design if different */
+    --destructive-foreground: 210 40% 98%; /* Unchanged */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 20% 84%; /* #D1D5DB - Cool Gray Border */
+    --input: 215 20% 84%; /* #D1D5DB */
+    --ring: 217 90% 60%; /* Primary color for focus ring - #3B82F6 */
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* 8px, fits "4px-8px" spec */
 
-    --sidebar-background: 0 0% 98%;
+    /* Typography */
+    --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Light Mode */
+    --sidebar-background: 216 17% 96%;
+    --sidebar-foreground: 215 20% 30%;
+    --sidebar-primary: 217 90% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 80% 90%;
+    --sidebar-accent-foreground: 217 90% 35%;
+    --sidebar-border: 215 20% 80%;
+    --sidebar-ring: 217 90% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Design Philosophy: Dark Mode */
+    --background: 215 28% 17%; /* #1F2937 - Dark Gray */
+    --foreground: 216 17% 98%; /* #F9FAFB - Light Gray/Off-white text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 216 25% 27%; /* #374151 - Slightly lighter dark gray */
+    --card-foreground: 216 17% 98%; /* #F9FAFB */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 216 25% 27%; /* #374151 */
+    --popover-foreground: 216 17% 98%; /* #F9FAFB */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 217 90% 60%; /* #3B82F6 - Professional Blue (same as light) */
+    --primary-foreground: 210 40% 98%; /* Light text for on-primary */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 216 25% 22%; /* Slightly darker than card bg */
+    --secondary-foreground: 216 17% 85%; /* Lighter text */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 216 25% 22%;
+    --muted-foreground: 215 20% 65%; /* Mid-gray text */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 216 25% 22%;
+    --accent-foreground: 216 17% 85%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%; /* Unchanged - Needs specific design if different */
+    --destructive-foreground: 210 40% 98%; /* Unchanged */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 216 25% 35%; /* Slightly lighter than card background */
+    --input: 216 25% 35%;
+    --ring: 217 90% 60%; /* Primary color for focus ring - #3B82F6 */
+
+    /* Sidebar Dark Mode */
+    --sidebar-background: 215 28% 15%;
+    --sidebar-foreground: 216 17% 90%;
+    --sidebar-primary: 217 90% 65%;
+    --sidebar-primary-foreground: 215 28% 10%;
+    --sidebar-accent: 216 25% 20%;
+    --sidebar-accent-foreground: 216 17% 80%;
+    --sidebar-border: 216 25% 30%;
+    --sidebar-ring: 217 90% 65%;
   }
 }
 
@@ -97,5 +98,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
